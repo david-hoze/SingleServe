@@ -22,6 +22,7 @@ export default class EducationPreview extends Component {
         </View>
         <View style={styles.infoContainer}>
           <View style={styles.textContainer}>
+          <Text>Subscribe To Our Course:</Text>
           <TextInput
               style={styles.edittext}
               placeholder="email@domain.com"
@@ -76,7 +77,8 @@ const styles = StyleSheet.create({
     flexDirection:'column'
   },
   buttonsContainer:{
-
+    position:'absolute',
+    bottom:10,
     // alignItems:'flex-end',
     flex:1
 
@@ -96,7 +98,8 @@ const styles = StyleSheet.create({
       height: 28,
       marginBottom: 5,
       borderColor: 'gray',
-      borderWidth: 1
+      borderWidth: 1,
+      padding: 15
 },
   secondaryButton:{
       padding: 10,

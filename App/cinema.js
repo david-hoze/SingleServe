@@ -99,9 +99,7 @@ const styles = StyleSheet.create({
         borderWidth: 3,
         padding: 10,
         width: 100,
-        marginBottom: 5,
-        textAlign: 'center',
-        color: 'black'
+        marginBottom: 5
     },
     seperator: {
         height: 10,
