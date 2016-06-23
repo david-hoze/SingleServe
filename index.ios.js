@@ -29,7 +29,7 @@ class SingleServe extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
       <View style={styles.appBar} />
       <ScrollView style={styles.scrollview}>
           <View style={styles.insideScrollview}>
@@ -66,6 +66,9 @@ const Colors = {
 };
 
 const styles = StyleSheet.create({
+  container:{
+      flex: 1
+  },
   appBar: {
     // position: 'absolute',
         left: 0,
