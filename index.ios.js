@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 
 import CinemaPreview from './App/cinema'
-
+import EducationPreview from './App/education'
 var AppReloader = require('NativeModules').AppReloader;
 
 class SingleServe extends Component {
@@ -35,7 +35,7 @@ class SingleServe extends Component {
           <View style={styles.insideScrollview}>
             <CinemaPreview/>
             <View style={styles.seperator} />
-            <CinemaPreview/>
+            <EducationPreview/>
             <View style={styles.seperator} />
             <CinemaPreview/>
             <View style={styles.seperator} />
