@@ -87,7 +87,11 @@ const styles = StyleSheet.create({
         flex: 1
     },
     seperator: {
-        padding: 10
+      marginRight: 4,
+      marginLeft:4,
+      marginBottom: 20,
+      height: 1,
+      backgroundColor: "#bebebe"
     }
 });
 
