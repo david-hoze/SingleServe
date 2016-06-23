@@ -11,8 +11,11 @@ import {
   Text,
   View,
   Platform,
-  TouchableHighlight
+  TouchableHighlight,
+  ScrollView
 } from 'react-native';
+
+import CinemaPreview from './App/cinema'
 
 var AppReloader = require('NativeModules').AppReloader;
 
@@ -26,9 +29,21 @@ class SingleServe extends Component {
 
   render() {
     return (
-      <TouchableHighlight style={styles.button} onPress={this.handleSubmit}>
-        <Text style={styles.buttonText}>LOAD & RUN</Text>
-      </TouchableHighlight>
+      <View>
+      <View style={styles.appBar} />
+      <ScrollView style={styles.scrollview}>
+          <View style={styles.insideScrollview}>
+            <CinemaPreview/>
+            <View style={styles.seperator} />
+            <CinemaPreview/>
+            <View style={styles.seperator} />
+            <CinemaPreview/>
+            <View style={styles.seperator} />
+            <CinemaPreview/>
+            <View style={styles.seperator} />
+          </View>
+      </ScrollView>
+      </View>
     );
   }
 }
@@ -51,30 +66,28 @@ const Colors = {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  appBar: {
+    // position: 'absolute',
+        left: 0,
+        right: 0,
+        top: 50,
+        bottom: 0,
+        height: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+      // flex: 1,
+      backgroundColor: '#FFF'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  scrollview: {
+      flex: 1,
+      flexDirection: 'column'
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+  insideScrollview: {
+      flex: 1
   },
-  button: {
-    backgroundColor: Colors.tintColor,
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: Platform.OS == 'ios' ? 10 : null,
-    marginBottom: Platform.OS === 'android' ? 10 : null,
-    height: 45,
-  },
+  seperator: {
+    padding: 10
+  }
 });
 
 AppRegistry.registerComponent('SingleServe', () => SingleServe);
