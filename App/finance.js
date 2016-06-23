@@ -29,8 +29,6 @@ export default class FinancePreview extends Component {
                 </View>
                 <View style={styles.infoContainer}>
                     <View style={styles.textContainer}>
-                        <Text>Screening in 42 min.</Text>
-                        <Text>You can get there in 24 min. walk</Text>
                     </View>
                     <View style={styles.buttonsContainer}>
                         <View style={styles.buttons}>
@@ -67,7 +65,7 @@ const styles = StyleSheet.create({
         height: 60
     },
     textContainer: {
-        margin: 10
+        flex: 0
     },
     infoContainer: {
         padding: 10,
