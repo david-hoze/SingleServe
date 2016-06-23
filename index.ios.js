@@ -18,6 +18,8 @@ import {
 import CinemaPreview from './App/cinema'
 import EducationPreview from './App/education'
 import FinancePreview from './App/finance'
+import NavigationBar from 'react-native-navbar';
+
 var AppReloader = require('NativeModules').AppReloader;
 
 class SingleServe extends Component {
@@ -29,8 +31,24 @@ class SingleServe extends Component {
   }
 
   render() {
+    var titleConfig = {
+  title: 'Apps Around You'
+};
+var refreshButton = {
+    title: 'Refresh',
+    handler: () => {
+        this.fetchData();
+    }
+};
+var aboutButton = {
+    title: 'About',
+    handler: () => {
+        this.setState({modalOpen: true});
+    }
+};
     return (
       <View style={styles.container}>
+      <NavigationBar title={titleConfig} rightButton={aboutButton} leftButton={refreshButton}/>
       <View style={styles.appBar} />
       <ScrollView style={styles.scrollview}>
           <View style={styles.insideScrollview}>
