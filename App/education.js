@@ -95,11 +95,9 @@ const styles = StyleSheet.create({
   },
   edittext:{
       width:200,
-      height: 28,
-      marginBottom: 5,
       borderColor: 'gray',
       borderWidth: 1,
-      padding: 15
+      padding: 5
 },
   secondaryButton:{
       padding: 10,
