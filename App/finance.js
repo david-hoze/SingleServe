@@ -16,7 +16,7 @@ export default class FinancePreview extends Component {
         return (
             <View style={styles.preview}>
                 <View style={styles.containerView}>
-                    <Image source={require('../resources/finance.jpg')} style={styles.container}/>
+                    <Image source={require('../resources/stocks1.png')} style={styles.container}/>
                 </View>
                 <View style={styles.infoContainer}>
                     <View style={styles.textContainer}>
@@ -25,7 +25,7 @@ export default class FinancePreview extends Component {
                     </View>
                     <View style={styles.buttonsContainer}>
                         <View style={styles.buttons}>
-                            <Button style={styles.secondaryButton}>Order Now</Button>
+                            <Button style={styles.button}>See more</Button>
                         </View>
                     </View>
                 </View>

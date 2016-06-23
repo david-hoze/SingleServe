@@ -87,11 +87,14 @@ const styles = StyleSheet.create({
     alignItems:'center',
     flex:1
   },
-  button:{
-    padding: 10,
-    width:100,
-    marginBottom: 5,
-    backgroundColor: 'blue'
+  button: {
+      borderColor: '#448bad',
+      backgroundColor: 'white',
+      borderRadius: 0,
+      borderWidth: 3,
+      padding: 10,
+      width: 100,
+      marginBottom: 5
   },
   edittext:{
       width:200,
@@ -109,7 +112,7 @@ const styles = StyleSheet.create({
   },
   buttonText:{
     textAlign: 'center',
-    color: 'white'
+    color: 'black'
   },
   seperator:
   {
