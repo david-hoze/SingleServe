@@ -16,6 +16,9 @@ import {
 } from 'react-native';
 
 import CinemaPreview from './App/cinema'
+import EducationPreview from './App/education'
+import FinancePreview from './App/finance'
+import NavigationBar from 'react-native-navbar';
 
 var AppReloader = require('NativeModules').AppReloader;
 
@@ -26,23 +29,36 @@ class SingleServe extends Component {
     }
 
     render() {
-        return (
-            <View style={styles.container}>
-                <View style={styles.appBar}/>
-                <ScrollView style={styles.scrollview}>
-                    <View style={styles.insideScrollview}>
-                        <CinemaPreview/>
-                        <View style={styles.seperator}/>
-                        <CinemaPreview/>
-                        <View style={styles.seperator}/>
-                        <CinemaPreview/>
-                        <View style={styles.seperator}/>
-                        <CinemaPreview/>
-                        <View style={styles.seperator}/>
-                    </View>
-                </ScrollView>
+      var titleConfig = {
+    title: 'Apps Around You'
+};
+  var refreshButton = {
+      title: 'Refresh',
+      handler: () => {
+          this.fetchData();
+      }
+  };
+  var aboutButton = {
+      title: 'About',
+      handler: () => {
+          this.setState({modalOpen: true});
+      }
+  };
+      return (
+        <View style={styles.container}>
+        <NavigationBar title={titleConfig} rightButton={aboutButton} leftButton={refreshButton}/>
+        <ScrollView style={styles.scrollview}>
+            <View style={styles.insideScrollview}>
+              <CinemaPreview/>
+              <View style={styles.seperator} />
+              <EducationPreview/>
+              <View style={styles.seperator} />
+              <FinancePreview/>
+              <View style={styles.seperator} />
             </View>
-        );
+        </ScrollView>
+        </View>
+      );
     }
 }
 
@@ -89,7 +105,7 @@ const styles = StyleSheet.create({
     seperator: {
       marginRight: 4,
       marginLeft:4,
-      marginBottom: 20,
+      marginBottom: 40,
       height: 1,
       backgroundColor: "#bebebe"
     }

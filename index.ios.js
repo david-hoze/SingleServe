@@ -40,8 +40,6 @@ class SingleServe extends Component {
             <View style={styles.seperator} />
             <FinancePreview/>
             <View style={styles.seperator} />
-            <CinemaPreview/>
-            <View style={styles.seperator} />
           </View>
       </ScrollView>
       </View>
@@ -92,9 +90,9 @@ const styles = StyleSheet.create({
   seperator: {
     marginRight: 4,
     marginLeft:4,
-    marginBottom: 20,
+    marginBottom: 40,
     height: 1,
-    backgroundColor: "#bebebe"
+    backgroundColor: '#bebebe'
   }
 });
 

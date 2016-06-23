@@ -88,10 +88,7 @@ const styles = StyleSheet.create({
     flex:1
   },
   button: {
-      borderColor: '#448bad',
-      backgroundColor: 'white',
-      borderRadius: 0,
-      borderWidth: 3,
+      backgroundColor: 'rgb(138, 32, 171)',
       padding: 10,
       width: 100,
       marginBottom: 5
@@ -112,7 +109,7 @@ const styles = StyleSheet.create({
   },
   buttonText:{
     textAlign: 'center',
-    color: 'black'
+    color: 'white'
   },
   seperator:
   {
