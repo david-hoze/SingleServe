@@ -9,7 +9,16 @@ import {
     Image
 } from 'react-native';
 import Button from 'apsl-react-native-button';
+
+var AppReloader = require('NativeModules').AppReloader;
+
 export default class FinancePreview extends Component {
+
+  handleSubmit() {
+    AppReloader.reloadAppWithURLString("https://dl.dropboxusercontent.com/u/68064741/finance.jsbundle",
+                                     "Finance",
+                                     "Finance");
+  }
 
     render() {
 
@@ -25,7 +34,7 @@ export default class FinancePreview extends Component {
                     </View>
                     <View style={styles.buttonsContainer}>
                         <View style={styles.buttons}>
-                            <Button style={styles.button}>See more</Button>
+                            <Button style={styles.button} onPress={this.handleSubmit}>See more</Button>
                         </View>
                     </View>
                 </View>
