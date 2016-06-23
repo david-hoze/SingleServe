@@ -17,6 +17,7 @@ import {
 
 import CinemaPreview from './App/cinema'
 import EducationPreview from './App/education'
+import FinancePreview from './App/finance'
 var AppReloader = require('NativeModules').AppReloader;
 
 class SingleServe extends Component {
@@ -37,7 +38,7 @@ class SingleServe extends Component {
             <View style={styles.seperator} />
             <EducationPreview/>
             <View style={styles.seperator} />
-            <CinemaPreview/>
+            <FinancePreview/>
             <View style={styles.seperator} />
             <CinemaPreview/>
             <View style={styles.seperator} />
